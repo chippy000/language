@@ -19,12 +19,9 @@
  {% else %}
  <p><strong>此類別目前並無頁面。</strong></p>
  {% endif %}
+ <p><a href={% url 'wiki:addPage' category.name %}>新增頁面</a></p>
 {% else %}
  <p>所指定的類別「{{categoryName}}」不存在。</p>
-8-5
-26
-27
-28
 {% endif %}
 </body>
 </html>
