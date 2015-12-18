@@ -1,8 +1,10 @@
-<!doctype html>
-{% load staticfiles %}
 <html>
 <head>
-<title>程式語言小百科</title>
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block heading %}關於{% endblock %}
+{% block content %}
+
 <meta charset=utf-8>
 <link rel=stylesheet href={% static 'main/css/main.css' %}>
 </head>
@@ -12,5 +14,6 @@
 <p>現在時間：<span style=color:red;>{{time}}</span></p>
 <a href={% url 'wiki:about' %}>關於程式語言小百科</a><br>
 <a href={% url 'wiki:wiki' %}>前往Wiki頁面</a> 
+{% endblock %}
 </body>
 </html>

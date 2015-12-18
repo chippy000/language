@@ -1,10 +1,7 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-<head>
-<title>程式語言小百科</title>
-<meta charset=utf-8>
-<link rel=stylesheet href="{% static 'main/css/main.css' %}">
+{% extends "main/base.html" %}
+{% block heading %}「{{category.name}}」之相關網頁{% endblock %}
+{% block content %}
+
 </head>
 <body>
 {% if category %}
@@ -36,5 +33,9 @@
 {% else %}
  <p>所指定的類別「{{categoryName}}」不存在。</p>
 {% endif %}
+<br>
+
+<p><a href={% url 'wiki:wiki' %}>回 Wiki 網頁</a></p>
+{% endblock %}
 </body>
 </html>

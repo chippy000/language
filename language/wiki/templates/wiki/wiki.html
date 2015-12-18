@@ -1,17 +1,12 @@
-<!doctype html>
+{% extends "main/base.html" %}
+{% block heading %}程式語言分類{% endblock %}
+{% block content %}
 
-{% load staticfiles %}
-
-<html>
-<head>
-<title>程式語言小百科</title>
-<meta charset=utf-8>
-<link rel=stylesheet href={% static 'main/css/main.css' %}>
 </head>
 <body>
-<h1>Wiki說--Hello world!</h1>
+
 {% if categories %}
- <h2>程式語言類別：</h2>
+
  <table>
  <tr><th>類別名稱</th></th><th></th></th></tr>
 	 {% for category in categories %}
@@ -37,6 +32,6 @@
 {% endif %}
 <p><a href={% url 'wiki:addCategory' %}>新增程式語言分類</a></p>
 <a href={% url 'main:main' %}>回首頁</a>
-<!-- <img src={% static 'wiki/img/proglang.png' %} alt=程式語言影像> -->
+{% endblock %}
 </body>
 </html>
