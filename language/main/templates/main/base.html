@@ -1,0 +1,13 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Django 專案</title>
+<meta charset=utf-8>
+<link rel=stylesheet href={% static 'main/css/main.css' %}>
+</head>
+<body>
+<h1>Django 學習手冊 -- {% block heading %}{% endblock %}</h1>
+{% block content %}{% endblock %}
+</body>
+</html>
